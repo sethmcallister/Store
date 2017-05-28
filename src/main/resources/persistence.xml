@@ -1,0 +1,22 @@
+<persistence version="2.1"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Primary" transaction-type="RESOURCE_LOCAL">
+        <class>ua.lviv.store.entity.Customer</class>
+        <class>ua.lviv.store.entity.Order</class>
+        <class>ua.lviv.store.entity.OrderDetails</class>
+        <class>ua.lviv.store.entity.Product</class>
+        <class>ua.lviv.store.entity.Category</class>
+
+        <properties>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/webstore" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="root" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.enable_lazy_load_no_trans" value = "true" />
+        </properties>
+    </persistence-unit>
+
+</persistence>
